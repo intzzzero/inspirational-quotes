@@ -30,7 +30,7 @@ const QuotesWrapper = styled.article`
     padding: 20px 15px;
     margin: 20px 0;
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -52,7 +52,6 @@ const QuotesWrapper = styled.article`
     h1 {
       font-size: 28px;
       line-height: 45px;
-      transition: 0.5s ease-in-out;
     }
   }
 
@@ -60,7 +59,6 @@ const QuotesWrapper = styled.article`
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 15%;
-    transition: 0.5s ease-in-out;
   }
 `;
 
