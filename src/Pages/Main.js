@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import Quotes from '../Components/Quotes';
 
 function Main() {
   const [randomQuote, setRandomQuote] = useState({});
@@ -22,7 +23,7 @@ function Main() {
 
   return (
     <MainWrapper>
-      <h1>hello</h1>
+      <Quotes randomQuote={randomQuote} />
     </MainWrapper>
   );
 }
