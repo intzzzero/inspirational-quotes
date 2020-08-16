@@ -40,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
+    color: rgba(0, 0, 0, 0.8);
 
     ol, ul {
       list-style: none;

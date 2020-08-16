@@ -26,19 +26,20 @@ const QuotesWrapper = styled.article`
   flex-direction: column;
 
   .textWrapper {
+    max-width: 80%;
     margin: 20px 0;
     text-align: center;
     position: relative;
 
     .leftQuote {
-      font-size: 35px;
+      font-size: 30px;
       position: absolute;
       top: -50px;
       left: 0;
     }
 
     .rightQuote {
-      font-size: 35px;
+      font-size: 30px;
       position: absolute;
       bottom: -50px;
       right: 0;
@@ -54,7 +55,7 @@ const QuotesWrapper = styled.article`
   h3 {
     font-size: 18px;
     letter-spacing: 1px;
-    margin-top: 50px;
+    margin-top: 15%;
   }
 `;
 
