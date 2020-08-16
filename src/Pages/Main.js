@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 
 function Main() {
+  const [randomQuote, setRandomQuote] = useState({});
   useEffect(() => {
-    fetch('https://type.fit/api/quotes')
-      .then((res) => res.json())
-      .then((res) => console.log(res));
+    getQuotes(quotesRandomIdx());
   }, []);
+
+  const quotesRandomIdx = () => {
+    return Math.floor(Math.random() * 1500);
+  };
+
+  const getQuotes = async (idx) => {
+    await axios
+      .get('https://type.fit/api/quotes')
+      .then((res) => setRandomQuote(res.data[idx]));
+  };
+
+  console.log(randomQuote);
+
   return (
     <MainWrapper>
       <h1>hello</h1>
