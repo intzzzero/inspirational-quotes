@@ -27,21 +27,24 @@ const QuotesWrapper = styled.article`
 
   .textWrapper {
     max-width: 80%;
+    padding: 20px 5px;
     margin: 20px 0;
     text-align: center;
     position: relative;
+    border-radius: 15px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
 
     .leftQuote {
-      font-size: 30px;
+      font-size: 40px;
       position: absolute;
-      top: -50px;
+      top: -60px;
       left: 0;
     }
 
     .rightQuote {
-      font-size: 30px;
+      font-size: 40px;
       position: absolute;
-      bottom: -50px;
+      bottom: -60px;
       right: 0;
     }
 

@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
