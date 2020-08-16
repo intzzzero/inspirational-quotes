@@ -19,9 +19,13 @@ function Main() {
       .then((res) => setRandomQuote(res.data[idx]));
   };
 
+  const getNewQuotes = () => {
+    getQuotes(quotesRandomIdx());
+  };
+
   return (
     <MainWrapper>
-      <Quotes randomQuote={randomQuote} />
+      <Quotes getNewQuotes={getNewQuotes} randomQuote={randomQuote} />
       <GlobalStyles />
     </MainWrapper>
   );

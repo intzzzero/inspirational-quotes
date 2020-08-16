@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
-function Quotes({ randomQuote }) {
+function Quotes({ randomQuote, getNewQuotes }) {
   return (
     <QuotesWrapper>
-      <section className='textWrapper'>
+      <section className='textWrapper' onClick={getNewQuotes}>
         <FaQuoteLeft className='leftQuote' />
         <h1>{randomQuote.text}</h1>
         <FaQuoteRight className='rightQuote' />
@@ -27,12 +27,13 @@ const QuotesWrapper = styled.article`
 
   .textWrapper {
     max-width: 80%;
-    padding: 20px 5px;
+    padding: 20px 15px;
     margin: 20px 0;
-    text-align: center;
     position: relative;
     border-radius: 15px;
+    text-align: center;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 
     .leftQuote {
       font-size: 40px;
@@ -49,9 +50,9 @@ const QuotesWrapper = styled.article`
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 28px;
       line-height: 45px;
-      font-weight: 600;
+      transition: 0.5s ease-in-out;
     }
   }
 
@@ -59,6 +60,7 @@ const QuotesWrapper = styled.article`
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 15%;
+    transition: 0.5s ease-in-out;
   }
 `;
 
