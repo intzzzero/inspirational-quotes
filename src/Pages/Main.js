@@ -5,6 +5,7 @@ import Quotes from '../Components/Quotes';
 
 function Main() {
   const [randomQuote, setRandomQuote] = useState({});
+
   useEffect(() => {
     getQuotes(quotesRandomIdx());
   }, []);
@@ -14,9 +15,12 @@ function Main() {
   };
 
   const getQuotes = async (idx) => {
-    await axios
-      .get('https://type.fit/api/quotes')
-      .then((res) => setRandomQuote(res.data[idx]));
+    try {
+      const response = await axios.get('https://type.fit/api/quotes');
+      setRandomQuote(response.data[idx]);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getNewQuotes = () => {
