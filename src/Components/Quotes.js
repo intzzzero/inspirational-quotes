@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
-function Quotes({ randomQuote, getNewQuotes }) {
+function Quotes(props) {
+  const { randomQuote, getNewQuotes } = props;
   return (
     <QuotesWrapper>
       <section className='textWrapper' onClick={getNewQuotes}>
